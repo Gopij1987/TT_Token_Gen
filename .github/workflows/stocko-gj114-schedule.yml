@@ -1,0 +1,49 @@
+name: Stocko GJ114 Auto Login - Daily 1:03 UTC
+
+on:
+  schedule:
+    # Run daily at 1:03 UTC
+    - cron: '3 1 * * *'
+  
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  auto-login:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r essential/requirements_gj114.txt
+      
+      - name: Run Stocko Auto Login - GJ114
+        env:
+          GJ114_USERNAME: ${{ secrets.GJ114_USERNAME }}
+          GJ114_PASSWORD: ${{ secrets.GJ114_PASSWORD }}
+          GJ114_TOTP_SECRET: ${{ secrets.GJ114_TOTP_SECRET }}
+          GJ114_AUTH_CODE: ${{ secrets.GJ114_AUTH_CODE }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          cd essential
+          python stocko_auto_login_GJ114_API_V2.py
+      
+      - name: Job Status
+        if: always()
+        run: |
+          if [ ${{ job.status }} == 'success' ]; then
+            echo "✅ Auto-login job completed successfully"
+          else
+            echo "❌ Auto-login job failed"
+            exit 1
+          fi
