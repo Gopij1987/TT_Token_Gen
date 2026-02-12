@@ -49,7 +49,7 @@ def send_telegram_notification(tag, username, auth_code, success=True, duration=
         timestamp = now_ist.strftime("%Y-%m-%d %H:%M:%S")
         
         if success:
-            message = f"<b>🚀 {tag} API Login Success!</b>\n"
+            message = f"<b>🚀 Token Generated!</b>\n"
         else:
             message = f"<b>❌ {tag} API Login Failed!</b>\n"
 
@@ -58,7 +58,7 @@ def send_telegram_notification(tag, username, auth_code, success=True, duration=
         message += f"⏰ <b>Time:</b> <code>{timestamp}</code>\n"
 
         if success:
-            message += "\n<b>🔐 Login</b>\n"
+            message += "\n<b>🔐 Token Generated</b>\n"
             if totp_code:
                 message += f"• <b>TOTP:</b> <code>{totp_code}</code>\n"
             if duration:
