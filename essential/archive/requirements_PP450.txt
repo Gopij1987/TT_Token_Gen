@@ -1,0 +1,5 @@
+# PP450 - Stocko Broker Auto Login Dependencies
+requests>=2.31.0
+pyotp>=2.9.0
+selenium>=4.16.0
+python-telegram-bot>=13.13

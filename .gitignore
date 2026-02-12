@@ -1,0 +1,38 @@
+# ═══════════════════════════════════════════════════════════
+# SECURITY: Prevent credentials from being pushed to GitHub
+# ═══════════════════════════════════════════════════════════
+
+# Environment Variables (NEVER COMMIT - Contains credentials!)
+.env
+.env.*
+!.env.example
+
+# Python
+__pycache__/
+*.pyc
+*.pyo
+*.egg-info/
+.venv/
+venv/
+env/
+.Python
+
+# IDE
+.vscode/
+.idea/
+*.swp
+*.swo
+*~
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Project specific
+*.log
+*.tmp
+network_capture*.txt
+network_capture*.log
+
+# Archive (optional - keep if you want version control)
+# archive/
