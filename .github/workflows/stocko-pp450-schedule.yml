@@ -1,0 +1,50 @@
+name: Stocko PP450 Auto Login - Daily 2:15 UTC
+
+on:
+  schedule:
+    # Run daily at 2:15 UTC
+    - cron: '15 2 * * *'
+  
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  auto-login:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+      
+      - name: Set up Python
+        uses: actions/setup-python@v4
+        with:
+          python-version: '3.11'
+      
+      - name: Install dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install -r essential/requirements_gj114.txt
+      
+      - name: Run Stocko Auto Login - PP450
+        env:
+          USER_ID: PP450
+          PP450_USERNAME: ${{ secrets.PP450_USERNAME }}
+          PP450_PASSWORD: ${{ secrets.PP450_PASSWORD }}
+          PP450_TOTP_SECRET: ${{ secrets.PP450_TOTP_SECRET }}
+          PP450_AUTH_CODE: ${{ secrets.PP450_AUTH_CODE }}
+          TELEGRAM_BOT_TOKEN: ${{ secrets.TELEGRAM_BOT_TOKEN }}
+          TELEGRAM_CHAT_ID: ${{ secrets.TELEGRAM_CHAT_ID }}
+        run: |
+          cd essential
+          python stocko_auto_login_GJ114_API_V2.py
+      
+      - name: Job Status
+        if: always()
+        run: |
+          if [ ${{ job.status }} == 'success' ]; then
+            echo "✅ Auto-login job completed successfully"
+          else
+            echo "❌ Auto-login job failed"
+            exit 1
+          fi
