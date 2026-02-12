@@ -34,7 +34,7 @@ This guide shows all GitHub Secrets required for the Stocko auto-login workflows
 | `PP450_TOTP_SECRET` | `3USTV6L47PZMMJBX` | From `.env.PP450` |
 | `PP450_AUTH_CODE` | `733517` | From `.env.PP450` |
 
-**Schedule:** Daily at **2:15 UTC**  
+**Schedule:** Daily at **1:04 UTC**  
 **Workflow:** `.github/workflows/stocko-pp450-schedule.yml`
 
 ---
@@ -48,7 +48,7 @@ This guide shows all GitHub Secrets required for the Stocko auto-login workflows
 | `RR1001_TOTP_SECRET` | Your TOTP secret | From `.env.RR1001` |
 | `RR1001_AUTH_CODE` | Your auth code | From `.env.RR1001` |
 
-**Schedule:** Daily at **3:30 UTC**  
+**Schedule:** Daily at **1:05 UTC**  
 **Workflow:** `.github/workflows/stocko-rr1001-schedule.yml`
 
 ---
@@ -125,8 +125,8 @@ These files are protected by `.gitignore` and **never pushed to GitHub**.
 | User | Time (UTC) | Time (IST) | Schedule |
 |------|-----------|-----------|----------|
 | GJ114 | 1:03 UTC | 6:33 AM | Daily |
-| PP450 | 2:15 UTC | 7:45 AM | Daily |
-| RR1001 | 3:30 UTC | 9:00 AM | Daily |
+| PP450 | 1:04 UTC | 6:34 AM | Daily |
+| RR1001 | 1:05 UTC | 6:35 AM | Daily |
 
 ---
 

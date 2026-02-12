@@ -1,9 +1,9 @@
-name: Stocko PP450 Auto Login - Daily 2:15 UTC
+name: Stocko PP450 Auto Login - Daily 1:04 UTC
 
 on:
   schedule:
-    # Run daily at 2:15 UTC
-    - cron: '15 2 * * *'
+    # Run daily at 1:04 UTC (1 min after GJ114)
+    - cron: '4 1 * * *'
   
   # Allow manual trigger
   workflow_dispatch:

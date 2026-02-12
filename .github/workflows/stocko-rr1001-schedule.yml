@@ -1,9 +1,9 @@
-name: Stocko RR1001 Auto Login - Daily 3:30 UTC
+name: Stocko RR1001 Auto Login - Daily 1:05 UTC
 
 on:
   schedule:
-    # Run daily at 3:30 UTC
-    - cron: '30 3 * * *'
+    # Run daily at 1:05 UTC (2 min after GJ114)
+    - cron: '5 1 * * *'
   
   # Allow manual trigger
   workflow_dispatch:
