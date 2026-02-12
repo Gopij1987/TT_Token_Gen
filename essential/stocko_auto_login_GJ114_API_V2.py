@@ -48,32 +48,28 @@ def send_telegram_notification(tag, username, auth_code, success=True, duration=
         now_ist = datetime.now(ist)
         timestamp = now_ist.strftime("%Y-%m-%d %H:%M:%S")
         
+        # Header with username
+        message = f"<b>Token Status for {username}</b>\n"
+        
+        # Status line
         if success:
-            message = f"<b>🚀 Token Generated!</b>\n"
+            message += f"<b>Status - ✅ Token Generated</b>\n"
         else:
-            message = f"<b>❌ {tag} API Login Failed!</b>\n"
+            error_text = str(error_message)[:100] if error_message else "Unknown error"
+            message += f"<b>Status - ❌ {error_text}</b>\n"
 
-        message += f"👤 <b>Account:</b> <code>{username}</code>\n"
-        message += f"🔑 <b>Auth:</b> <code>{auth_code}</code>\n"
-        message += f"⏰ <b>Time:</b> <code>{timestamp}</code>\n"
+        # Account details
+        message += f"\n👤 Account: <code>{username}</code>\n"
+        message += f"🔑 Auth: <code>{auth_code}</code>\n"
+        message += f"⏰ Time: <code>{timestamp}</code>\n"
 
+        # Additional details only on success
         if success:
-            message += "\n<b>🔐 Token Generated</b>\n"
             if totp_code:
-                message += f"• <b>TOTP:</b> <code>{totp_code}</code>\n"
+                message += f"• TOTP: <code>{totp_code}</code>\n"
             if duration:
-                message += f"• <b>⏳ Duration:</b> <code>{duration:.1f}s</code>\n"
-            message += f"• <b>🖥️ Type:</b> <code>API (No Browser)</code>\n"
-            if final_url:
-                message += f"• <b>🔗 URL:</b> <code>{final_url.split('?')[0]}</code>\n"
-        else:
-            message += "\n<b>❗ Error Details:</b>\n"
-            if error_message:
-                # Limit error message length to avoid Telegram limits
-                error_text = str(error_message)[:200]
-                message += f"• <b>Error:</b> <code>{error_text}</code>\n"
-            else:
-                message += "• <b>Error:</b> <code>Unknown error occurred</code>\n"
+                message += f"• ⏳ Duration: <code>{duration:.1f}s</code>\n"
+            message += f"• 🖥️ Type: <code>API (No Browser)</code>\n"
 
         url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
         payload = {"chat_id": chat_id, "text": message, "parse_mode": "HTML"}
