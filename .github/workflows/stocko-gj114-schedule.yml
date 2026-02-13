@@ -3,7 +3,7 @@ name: Stocko GJ114 Auto Login - Daily 1:03 UTC
 on:
   schedule:
     # Run daily at 1:03 UTC
-    - cron: '3 1 * * *'
+    - cron: '38 0 * * *'
   
   # Allow manual trigger
   workflow_dispatch:
