@@ -2,7 +2,7 @@ name: Stocko PP450 Auto Login - Manual Only
 
 on:
   schedule:
-    - cron: '30 0 * * 1-5'  # Weekdays at 0:30 AM UTC
+    - cron: '15 23 * * 0-4'  # Weekdays at 11:15 PM UTC (previous evening)
   workflow_dispatch:
 
 jobs:
