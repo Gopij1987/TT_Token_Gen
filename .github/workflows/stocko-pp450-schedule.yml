@@ -2,7 +2,8 @@ name: Stocko PP450 Auto Login - Manual Only
 
 on:
   workflow_dispatch:
-
+  schedule:
+    - cron: '1 0 * * 1-5'
 jobs:
   auto-login:
     runs-on: ubuntu-latest
