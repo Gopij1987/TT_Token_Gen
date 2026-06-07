@@ -37,45 +37,51 @@ def get_credential(key):
 
 def send_telegram_notification(tag, username, auth_code, success=True, duration=None, totp_code=None, final_url=None, error_message=None):
     """Send Telegram notification"""
+    bot_token = os.getenv('TELEGRAM_BOT_TOKEN')
+    chat_id = os.getenv('TELEGRAM_CHAT_ID')
+
+    if not bot_token or not chat_id:
+        print(f"[{tag}] Telegram not configured: TELEGRAM_BOT_TOKEN={'set' if bot_token else 'MISSING'}, TELEGRAM_CHAT_ID={'set' if chat_id else 'MISSING'}")
+        return
+
+    ist = timezone(timedelta(hours=5, minutes=30))
+    now_ist = datetime.now(ist)
+    timestamp = now_ist.strftime("%Y-%m-%d %H:%M:%S")
+
+    # Header with username
+    message = f"<b>Token Status for {username}</b>\n"
+
+    # Status line
+    if success:
+        message += f"<b>Status - ✅ Token Generated</b>\n"
+    else:
+        error_text = str(error_message)[:100] if error_message else "Unknown error"
+        message += f"<b>Status - ❌ {error_text}</b>\n"
+
+    # Account details
+    message += f"\n👤 Account: <code>{username}</code>\n"
+    message += f"🔑 Auth: <code>{auth_code}</code>\n"
+    message += f"⏰ Time: <code>{timestamp}</code>\n"
+
+    # Additional details only on success
+    if success:
+        if totp_code:
+            message += f"• TOTP: <code>{totp_code}</code>\n"
+        if duration:
+            message += f"• ⏳ Duration: <code>{duration:.1f}s</code>\n"
+        message += f"• 🖥️ Type: <code>API (No Browser)</code>\n"
+
+    url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
+    payload = {"chat_id": chat_id, "text": message, "parse_mode": "HTML"}
+
     try:
-        bot_token = os.getenv('TELEGRAM_BOT_TOKEN')
-        chat_id = os.getenv('TELEGRAM_CHAT_ID')
-        
-        if not bot_token or not chat_id:
-            return
-        
-        ist = timezone(timedelta(hours=5, minutes=30))
-        now_ist = datetime.now(ist)
-        timestamp = now_ist.strftime("%Y-%m-%d %H:%M:%S")
-        
-        # Header with username
-        message = f"<b>Token Status for {username}</b>\n"
-        
-        # Status line
-        if success:
-            message += f"<b>Status - ✅ Token Generated</b>\n"
+        resp = requests.post(url, json=payload, timeout=10)
+        if resp.status_code != 200:
+            print(f"[{tag}] Telegram send failed: HTTP {resp.status_code} - {resp.text}")
         else:
-            error_text = str(error_message)[:100] if error_message else "Unknown error"
-            message += f"<b>Status - ❌ {error_text}</b>\n"
-
-        # Account details
-        message += f"\n👤 Account: <code>{username}</code>\n"
-        message += f"🔑 Auth: <code>{auth_code}</code>\n"
-        message += f"⏰ Time: <code>{timestamp}</code>\n"
-
-        # Additional details only on success
-        if success:
-            if totp_code:
-                message += f"• TOTP: <code>{totp_code}</code>\n"
-            if duration:
-                message += f"• ⏳ Duration: <code>{duration:.1f}s</code>\n"
-            message += f"• 🖥️ Type: <code>API (No Browser)</code>\n"
-
-        url = f"https://api.telegram.org/bot{bot_token}/sendMessage"
-        payload = {"chat_id": chat_id, "text": message, "parse_mode": "HTML"}
-        requests.post(url, json=payload, timeout=5)
-    except:
-        pass
+            print(f"[{tag}] Telegram notification sent")
+    except Exception as e:
+        print(f"[{tag}] Telegram exception: {e}")
 
 
 class StockoAPILoginV2:
