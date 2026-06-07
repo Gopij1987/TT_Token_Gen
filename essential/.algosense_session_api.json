@@ -1,0 +1,15 @@
+{
+  "timestamp": "2026-02-13T08:48:08.929173",
+  "username": "9940044222",
+  "endpoint": "https://api.algotest.in/login",
+  "payload_format": [
+    "phoneNumber",
+    "password"
+  ],
+  "tokens": {},
+  "cookies": {
+    "access_token_cookie": "eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6Z...",
+    "csrf_access_token": "6dcc57d7-e284-4e33-b333-43926bd64de8"
+  },
+  "duration_seconds": 1.1098897457122803
+}

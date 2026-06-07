@@ -1,0 +1,12 @@
+# Token V1 - Daily login at 8:31 AM IST (Monday-Friday)
+# Separate cron jobs per account - isolated failures
+# Add these lines with: sudo crontab -e
+
+# GJ114 - 8:31 AM IST, Mon-Fri
+31 8 * * 1-5 TZ=Asia/Kolkata /opt/token-v1/venv/bin/python3 /opt/token-v1/token_automation.py --account GJ114 >> /var/log/token-v1/gj114.log 2>&1
+
+# PP450 - 8:31 AM IST, Mon-Fri  
+31 8 * * 1-5 TZ=Asia/Kolkata /opt/token-v1/venv/bin/python3 /opt/token-v1/token_automation.py --account PP450 >> /var/log/token-v1/pp450.log 2>&1
+
+# RR1001 - 8:31 AM IST, Mon-Fri
+31 8 * * 1-5 TZ=Asia/Kolkata /opt/token-v1/venv/bin/python3 /opt/token-v1/token_automation.py --account RR1001 >> /var/log/token-v1/rr1001.log 2>&1

@@ -1,0 +1,12 @@
+{
+  "timestamp": "2026-02-13T08:35:28.332768",
+  "login_endpoint": {
+    "url": "https://algotest.in/login",
+    "method": "POST",
+    "fields": [],
+    "response_status": 405,
+    "response_url": "https://algotest.in/login"
+  },
+  "broker_endpoint": null,
+  "session_cookies": {}
+}

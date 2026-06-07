@@ -1,0 +1,230 @@
+{
+  "timestamp": "2026-02-13T08:42:07.038767",
+  "final_url": "https://algotest.in/dashboard",
+  "captured_requests": [
+    {
+      "method": "POST",
+      "timestamp": "2026-02-13T03:12:01.482Z",
+      "type": "fetch",
+      "url": "https://analytics.google.com/g/collect?v=2&tid=G-Y0EK98JRBT&gtm=45je62b1v870354649z8860143899za200zd870354649&_p=1770952316922&gcd=13l3l3l3l3l1&npa=1&dma=0&cid=635894844.1770952318&ul=en-gb&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B145.0.7632.68%7CChromium%3B145.0.7632.68&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AAAAAGQ&tag_exp=103116026~103200004~104527906~104528500~104684208~104684211~115616986~115938465~115938469~116988315&dp=%2Flogin&sid=1770952318&sct=1&seg=0&dl=https%3A%2F%2Falgotest.in%2Flogin&dt=Login%20-%20AlgoTest%20-%20Best%20Algo%20Trading%2C%20Paper%20Trading%20and%20Backtesting%20Software%20in%20India%20-%20AlgoTest&_s=2&tfd=7530"
+    },
+    {
+      "method": "POST",
+      "timestamp": "2026-02-13T03:12:01.742Z",
+      "type": "xhr",
+      "url": "https://api.algotest.in/login"
+    },
+    {
+      "method": "POST",
+      "timestamp": "2026-02-13T03:12:02.299Z",
+      "type": "fetch",
+      "url": "https://api.segment.io/v1/i"
+    },
+    {
+      "method": "GET",
+      "timestamp": "2026-02-13T03:12:02.701Z",
+      "type": "xhr",
+      "url": "https://api.algotest.in/virtuals"
+    },
+    {
+      "method": "GET",
+      "timestamp": "2026-02-13T03:12:02.703Z",
+      "type": "xhr",
+      "url": "https://api.algotest.in/indicators/strategies"
+    },
+    {
+      "method": "GET",
+      "timestamp": "2026-02-13T03:12:02.711Z",
+      "type": "xhr",
+      "url": "https://api.algotest.in/strategies"
+    },
+    {
+      "method": "GET",
+      "timestamp": "2026-02-13T03:12:02.715Z",
+      "type": "xhr",
+      "url": "https://api.algotest.in/folders"
+    },
+    {
+      "method": "GET",
+      "timestamp": "2026-02-13T03:12:02.794Z",
+      "type": "xhr",
+      "url": "https://api.algotest.in/portfolios"
+    },
+    {
+      "method": "GET",
+      "timestamp": "2026-02-13T03:12:02.797Z",
+      "type": "xhr",
+      "url": "https://api.algotest.in/payment/products"
+    },
+    {
+      "method": "GET",
+      "timestamp": "2026-02-13T03:12:02.802Z",
+      "type": "xhr",
+      "url": "https://api.algotest.in/plans"
+    },
+    {
+      "method": "GET",
+      "timestamp": "2026-02-13T03:12:02.806Z",
+      "type": "xhr",
+      "url": "https://api.algotest.in/plans_renew"
+    },
+    {
+      "method": "GET",
+      "timestamp": "2026-02-13T03:12:02.809Z",
+      "type": "xhr",
+      "url": "https://api.algotest.in/plans_renew_settings"
+    },
+    {
+      "method": "GET",
+      "timestamp": "2026-02-13T03:12:02.813Z",
+      "type": "xhr",
+      "url": "https://api.algotest.in/external_connect"
+    },
+    {
+      "method": "GET",
+      "timestamp": "2026-02-13T03:12:02.817Z",
+      "type": "xhr",
+      "url": "https://api.algotest.in/payment/products"
+    },
+    {
+      "method": "GET",
+      "timestamp": "2026-02-13T03:12:02.876Z",
+      "type": "xhr",
+      "url": "https://api.algotest.in/shareable/subscriber/subscriptions?object_type=strategy"
+    },
+    {
+      "method": "GET",
+      "timestamp": "2026-02-13T03:12:03.170Z",
+      "type": "xhr",
+      "url": "https://api.algotest.in/masterclass/all"
+    },
+    {
+      "method": "GET",
+      "timestamp": "2026-02-13T03:12:03.175Z",
+      "type": "xhr",
+      "url": "https://prices.algotest.in/underlyings"
+    },
+    {
+      "method": "GET",
+      "timestamp": "2026-02-13T03:12:03.181Z",
+      "type": "xhr",
+      "url": "https://api.algotest.in/user"
+    },
+    {
+      "method": "GET",
+      "timestamp": "2026-02-13T03:12:03.186Z",
+      "type": "xhr",
+      "url": "https://prices.algotest.in/expiries?date=2026-02-13"
+    },
+    {
+      "method": "GET",
+      "timestamp": "2026-02-13T03:12:03.191Z",
+      "type": "xhr",
+      "url": "https://prices.algotest.in/is-trading-holiday"
+    },
+    {
+      "method": "GET",
+      "timestamp": "2026-02-13T03:12:03.198Z",
+      "type": "xhr",
+      "url": "https://api.algotest.in/brokers"
+    },
+    {
+      "method": "GET",
+      "timestamp": "2026-02-13T03:12:03.203Z",
+      "type": "xhr",
+      "url": "https://api.algotest.in/payment/products"
+    },
+    {
+      "method": "POST",
+      "timestamp": "2026-02-13T03:12:03.638Z",
+      "type": "fetch",
+      "url": "https://analytics.google.com/g/collect?v=2&tid=G-Y0EK98JRBT&gtm=45je62b1v870354649za200zd870354649&_p=1770952316922&gcd=13l3l3l3l3l1&npa=1&dma=0&cid=635894844.1770952318&ul=en-gb&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B145.0.7632.68%7CChromium%3B145.0.7632.68&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AEEAAGQ&_s=3&tag_exp=103116026~103200004~104527906~104528500~104684208~104684211~115616986~115938465~115938469~116988315&sid=1770952318&sct=1&seg=0&dl=https%3A%2F%2Falgotest.in%2Flogin&dt=Login%20-%20AlgoTest%20-%20Best%20Algo%20Trading%2C%20Paper%20Trading%20and%20Backtesting%20Software%20in%20India%20-%20AlgoTest&en=form_start&ep.form_id=loginFormID&ep.form_name=&ep.form_destination=https%3A%2F%2Falgotest.in%2Flogin&epn.form_length=16&ep.first_field_id=&ep.first_field_name=phone&ep.first_field_type=text&epn.first_field_position=1&_et=2586&tfd=9684"
+    },
+    {
+      "method": "POST",
+      "timestamp": "2026-02-13T03:12:03.658Z",
+      "type": "fetch",
+      "url": "https://www.google.com/pagead/form-data/17148985988?gtm=45je62b1v870354649za200zd870354649xec&gcd=13l3l3l3l3l1&dma=0&tag_exp=103116026~103200004~104527906~104528500~104684208~104684211~115616986~115938465~115938469~116988315&npa=1&frm=0&pscdl=noapi&auid=679284060.1770952318&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B145.0.7632.68%7CChromium%3B145.0.7632.68&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0"
+    },
+    {
+      "method": "POST",
+      "timestamp": "2026-02-13T03:12:03.665Z",
+      "type": "fetch",
+      "url": "https://www.google.com/ccm/form-data/17148985988?gtm=45je62b1v870354649za200zd870354649xec&gcd=13l3l3l3l3l1&dma=0&tag_exp=103116026~103200004~104527906~104528500~104684208~104684211~115616986~115938465~115938469~116988315&npa=1&frm=0&pscdl=noapi&auid=679284060.1770952318&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B145.0.7632.68%7CChromium%3B145.0.7632.68&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0"
+    },
+    {
+      "method": "POST",
+      "timestamp": "2026-02-13T03:12:03.692Z",
+      "type": "fetch",
+      "url": "https://www.google.com/pagead/form-data/10957022965?gtm=45be62b1h1v891811099za200zd891811099xec&gcd=13l3l3l3l3l1&dma=0&tag_exp=103116026~103200004~104527906~104528501~104684208~104684211~115938465~115938469~116988316&npa=1&frm=0&pscdl=noapi&auid=679284060.1770952318&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B145.0.7632.68%7CChromium%3B145.0.7632.68&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0"
+    },
+    {
+      "method": "POST",
+      "timestamp": "2026-02-13T03:12:03.698Z",
+      "type": "fetch",
+      "url": "https://www.google.com/ccm/form-data/10957022965?gtm=45be62b1h1v891811099za200zd891811099xec&gcd=13l3l3l3l3l1&dma=0&tag_exp=103116026~103200004~104527906~104528501~104684208~104684211~115938465~115938469~116988316&npa=1&frm=0&pscdl=noapi&auid=679284060.1770952318&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B145.0.7632.68%7CChromium%3B145.0.7632.68&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0"
+    },
+    {
+      "method": "POST",
+      "timestamp": "2026-02-13T03:12:03.717Z",
+      "type": "fetch",
+      "url": "https://www.google.com/ccm/collect?frm=0&en=page_view&dl=https%3A%2F%2Falgotest.in%2Fdashboard&scrsrc=www.googletagmanager.com&rnd=134768747.1770952318&dt=Dashboard%20-%20AlgoTest%20-%20Best%20Algo%20Trading%2C%20Paper%20Trading%20and%20Backtesting%20Software%20in%20India%20-%20AlgoTest&auid=679284060.1770952318&navt=n&npa=1&gtm=45je62b1v870354649za200zd870354649xec&gcd=13l3l3l3l3l1&dma=0&tag_exp=103116026~103200004~104527906~104528500~104684208~104684211~115616986~115938465~115938469~116988315&apve=1&apvf=f&apvc=0&tids=AW-17148985988&tid=AW-17148985988&tft=1770952323716&tfd=9765"
+    },
+    {
+      "method": "POST",
+      "timestamp": "2026-02-13T03:12:03.723Z",
+      "type": "fetch",
+      "url": "https://www.google.com/ccm/collect?frm=0&en=page_view&dl=https%3A%2F%2Falgotest.in%2Fdashboard&scrsrc=www.googletagmanager.com&rnd=134768747.1770952318&dt=Dashboard%20-%20AlgoTest%20-%20Best%20Algo%20Trading%2C%20Paper%20Trading%20and%20Backtesting%20Software%20in%20India%20-%20AlgoTest&auid=679284060.1770952318&navt=n&npa=1&gtm=45be62b1h1v891811099za200zd891811099xec&gcd=13l3l3l3l3l1&dma=0&tag_exp=103116026~103200004~104527906~104528501~104684208~104684211~115938465~115938469~116988316&apve=1&apvf=f&apvc=0&tids=AW-10957022965&tid=AW-10957022965&tft=1770952323721&tfd=9770"
+    },
+    {
+      "method": "POST",
+      "timestamp": "2026-02-13T03:12:03.911Z",
+      "type": "fetch",
+      "url": "https://analytics.google.com/g/collect?v=2&tid=G-Y0EK98JRBT&gtm=45je62b1v870354649za200zd870354649&_p=1770952316922&gcd=13l3l3l3l3l1&npa=1&dma=0&cid=635894844.1770952318&ul=en-gb&sr=1280x720&uaa=x86&uab=64&uafvl=Not%253AA-Brand%3B99.0.0.0%7CGoogle%2520Chrome%3B145.0.7632.68%7CChromium%3B145.0.7632.68&uamb=0&uam=&uap=Windows&uapv=19.0.0&uaw=0&are=1&frm=0&pscdl=noapi&_eu=AEAAAGQ&_s=4&tag_exp=103116026~103200004~104527906~104528500~104684208~104684211~115616986~115938465~115938469~116988315&dl=https%3A%2F%2Falgotest.in%2Fdashboard&dr=https%3A%2F%2Falgotest.in%2Flogin&sid=1770952318&sct=1&seg=1&dt=Dashboard%20-%20AlgoTest%20-%20Best%20Algo%20Trading%2C%20Paper%20Trading%20and%20Backtesting%20Software%20in%20India%20-%20AlgoTest&en=page_view&_et=2136&tfd=9960"
+    },
+    {
+      "method": "GET",
+      "timestamp": "2026-02-13T03:12:03.956Z",
+      "type": "xhr",
+      "url": "https://prices.algotest.in/symbols-ltp?tokens=NSE_0%2CBSE_1%2CNSE_4%2CNSE_27%2CNSE_65%2CBSE_12%2CNSE_11&candle=2026-02-13T08%3A41%3A03%2B05%3A30"
+    },
+    {
+      "method": "POST",
+      "timestamp": "2026-02-13T03:12:05.249Z",
+      "type": "xhr",
+      "url": "https://api-js.mixpanel.com/track/?verbose=1&ip=1&_=1770952325248"
+    },
+    {
+      "method": "POST",
+      "timestamp": "2026-02-13T03:12:05.251Z",
+      "type": "xhr",
+      "url": "https://api-js.mixpanel.com/engage/?verbose=1&ip=1&_=1770952325250"
+    }
+  ],
+  "discovered_endpoints": [
+    {
+      "method": "POST",
+      "timestamp": "2026-02-13T03:12:01.742Z",
+      "type": "xhr",
+      "url": "https://api.algotest.in/login"
+    }
+  ],
+  "cookies": {
+    "access_token_cookie": "eyJhbGciOiJSUzUxMiIsInR5cCI6IkpXVCJ9.eyJmcmVzaCI6Z...",
+    "_gat_UA-217422508-1": "1",
+    "_gat_gtag_UA_217422508_1": "1",
+    "_gcl_au": "1.1.679284060.1770952318",
+    "csrf_access_token": "740b0e03-fd65-47dd-b170-def3d8c31db6",
+    "mp_f7c3d9535820295f2d256c66e7c13599_mixpanel": "%7B%22distinct_id%22%3A%22%22%2C%22%24device_id%22...",
+    "_ga_Y0EK98JRBT": "GS2.1.s1770952318$o1$g1$t1770952323$j55$l0$h0",
+    "ajs_anonymous_id": "96d1f19e-9b6a-4576-8082-853ba5e5bd5f",
+    "_fbp": "fb.1.1770952315684.14475120189554700",
+    "g_state": "{\"i_l\":0,\"i_ll\":1770952315947,\"i_b\":\"d4QHI6hltY2bK...",
+    "_gid": "GA1.2.1637049968.1770952318",
+    "ajs_user_id": "6746af5b113344e8c1241d43",
+    "ph_phc_H24CptSR6nBSVJ8nYCloSyDfhCk8DP22HBgC9qSwHPr_posthog": "%7B%22distinct_id%22%3A%226746af5b113344e8c1241d43...",
+    "rzp_unified_session_id": "SFTduiOcWc8bs6",
+    "_ga": "GA1.1.635894844.1770952318"
+  },
+  "success": true
+}
